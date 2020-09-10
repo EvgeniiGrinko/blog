@@ -1,0 +1,46 @@
+<%-include('../layout/header.ejs')%>
+<div class="main">
+  <div class="container">
+    <div class="content">
+     
+<div class="post">
+        <div class="top">
+          <h2> <%=post.title %>  </h2>
+        </div>
+        <div class="body">
+          
+            <%-post.body %> 
+          
+        </div>
+        <div class="bottom">
+          <div class="author">
+            Автор:
+            <a href="/"><%=post.owner %></a>
+          </div>
+        </div>
+      </div>
+       
+        <div class="comments" id="<%=post.id %>">
+            <h3>Комментарии</h3>
+            <div class="comment-list">
+              <%- include('../layout/comments.ejs', {items: comments}) %>
+                
+                <form class="comment">
+                    <textarea name="body"></textarea>
+                    <div class="buttons">
+                        <button class="cancel secondary">Отмена</button>
+                        <button class="send">Отправить</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+      
+    </div>
+      <%-include('../layout/sidebar.ejs')%>
+    </div>
+  </div>
+   
+<%-include('../layout/footer.ejs')%>
