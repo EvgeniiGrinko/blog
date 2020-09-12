@@ -34,7 +34,7 @@ mongoose.connection
   console.log(`Connected to ${info.host}:${info.port}/${info.name}`);
   //require('./mocks')();
 },
-mongoose.connect('mongodb://localhost:27017/blog', options));
+mongoose.connect('mongodb+srv://GrinkoEvgenii:Canada985560@freespace.orzwh.mongodb.net/mongodb:blog?retryWrites=true&w=majority', options));
 //express
 const app = express();
 
